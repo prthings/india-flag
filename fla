@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Flag Floating Over Map</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            position: relative;
+        }
+        .map {
+            width: 400px;
+            position: relative;
+        }
+        .flag {
+            width: 150px;
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: float 3s infinite ease-in-out;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-15px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/India_map_outline.png/600px-India_map_outline.png" class="map" alt="India Map">
+    <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" class="flag" alt="Indian Flag">
+</body>
+</html>
